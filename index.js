@@ -1,4 +1,4 @@
-const { validarNumero, validarDivision } = require('./utils');
+import { validarNumero, validarDivision } from './utils.js';
 
 function sumar(a, b) {
   validarNumero(a);
@@ -38,4 +38,4 @@ try {
   console.log('Error esperado:', e.message);
 }
 
-module.exports = { sumar, restar, multiplicar, dividir };
+export { sumar, restar, multiplicar, dividir };

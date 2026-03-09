@@ -35,4 +35,4 @@ function encontrarMinimo(numeros) {
   return Math.min(...numeros);
 }
 
-module.exports = { validarNumero, validarDivision, calcularPromedio, encontrarMaximo, encontrarMinimo };
+export { validarNumero, validarDivision, calcularPromedio, encontrarMaximo, encontrarMinimo };
