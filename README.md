@@ -13,9 +13,11 @@ A simple calculator program that performs arithmetic operations with input valid
 - Division by zero validation
 - Numeric input validation
 - List average calculator
+- Max and min value finder
 
 ## Usage
 
 ```bash
-node index.js
+node index.js       # Run main calculator
+node validations.js # Run all validation tests
 ```
