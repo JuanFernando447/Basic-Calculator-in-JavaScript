@@ -19,10 +19,20 @@ function calcularPromedio(numeros) {
   return suma / numeros.length;
 }
 
-// Ejemplo de uso del promedio
-console.log('=== Promedio ===');
-const lista = [8, 6, 9, 7, 10];
-console.log('Lista:', lista);
-console.log('Promedio:', calcularPromedio(lista));
+function encontrarMaximo(numeros) {
+  if (!Array.isArray(numeros) || numeros.length === 0) {
+    throw new Error('Array must contain at least one number.');
+  }
+  numeros.forEach(validarNumero);
+  return Math.max(...numeros);
+}
 
-module.exports = { validarNumero, validarDivision, calcularPromedio };
+function encontrarMinimo(numeros) {
+  if (!Array.isArray(numeros) || numeros.length === 0) {
+    throw new Error('Array must contain at least one number.');
+  }
+  numeros.forEach(validarNumero);
+  return Math.min(...numeros);
+}
+
+module.exports = { validarNumero, validarDivision, calcularPromedio, encontrarMaximo, encontrarMinimo };
