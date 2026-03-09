@@ -1,38 +1,38 @@
-function validarNumero(valor) {
-  if (typeof valor !== 'number' || isNaN(valor)) {
-    throw new Error(`El valor "${valor}" no es un número válido.`);
+function validateNumber(value) {
+  if (typeof value !== 'number' || isNaN(value)) {
+    throw new Error(`The value "${value}" is not a valid number.`);
   }
 }
 
-function validarDivision(divisor) {
+function validateDivision(divisor) {
   if (divisor === 0) {
-    throw new Error('No se puede dividir entre cero.');
+    throw new Error('Cannot divide by zero.');
   }
 }
 
-function calcularPromedio(numeros) {
-  if (!Array.isArray(numeros) || numeros.length === 0) {
-    throw new Error('Se requiere un arreglo con al menos un número.');
+function calculateAverage(numbers) {
+  if (!Array.isArray(numbers) || numbers.length === 0) {
+    throw new Error('An array with at least one number is required.');
   }
-  numeros.forEach(validarNumero);
-  const suma = numeros.reduce((acc, n) => acc + n, 0);
-  return suma / numeros.length;
+  numbers.forEach(validateNumber);
+  const sum = numbers.reduce((acc, n) => acc + n, 0);
+  return sum / numbers.length;
 }
 
-function encontrarMaximo(numeros) {
-  if (!Array.isArray(numeros) || numeros.length === 0) {
+function findMax(numbers) {
+  if (!Array.isArray(numbers) || numbers.length === 0) {
     throw new Error('Array must contain at least one number.');
   }
-  numeros.forEach(validarNumero);
-  return Math.max(...numeros);
+  numbers.forEach(validateNumber);
+  return Math.max(...numbers);
 }
 
-function encontrarMinimo(numeros) {
-  if (!Array.isArray(numeros) || numeros.length === 0) {
+function findMin(numbers) {
+  if (!Array.isArray(numbers) || numbers.length === 0) {
     throw new Error('Array must contain at least one number.');
   }
-  numeros.forEach(validarNumero);
-  return Math.min(...numeros);
+  numbers.forEach(validateNumber);
+  return Math.min(...numbers);
 }
 
-export { validarNumero, validarDivision, calcularPromedio, encontrarMaximo, encontrarMinimo };
+export { validateNumber, validateDivision, calculateAverage, findMax, findMin };

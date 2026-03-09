@@ -1,41 +1,41 @@
-import { validarNumero, validarDivision } from './utils.js';
+import { validateNumber, validateDivision } from './utils.js';
 
-function sumar(a, b) {
-  validarNumero(a);
-  validarNumero(b);
+function add(a, b) {
+  validateNumber(a);
+  validateNumber(b);
   return a + b;
 }
 
-function restar(a, b) {
-  validarNumero(a);
-  validarNumero(b);
+function subtract(a, b) {
+  validateNumber(a);
+  validateNumber(b);
   return a - b;
 }
 
-function multiplicar(a, b) {
-  validarNumero(a);
-  validarNumero(b);
+function multiply(a, b) {
+  validateNumber(a);
+  validateNumber(b);
   return a * b;
 }
 
-function dividir(a, b) {
-  validarNumero(a);
-  validarNumero(b);
-  validarDivision(b);
+function divide(a, b) {
+  validateNumber(a);
+  validateNumber(b);
+  validateDivision(b);
   return a / b;
 }
 
-// Ejemplos de uso
-console.log('=== Calculadora Básica ===');
-console.log('10 + 5 =', sumar(10, 5));
-console.log('10 - 5 =', restar(10, 5));
-console.log('10 * 5 =', multiplicar(10, 5));
-console.log('10 / 5 =', dividir(10, 5));
+// Usage examples
+console.log('=== Basic Calculator ===');
+console.log('10 + 5 =', add(10, 5));
+console.log('10 - 5 =', subtract(10, 5));
+console.log('10 * 5 =', multiply(10, 5));
+console.log('10 / 5 =', divide(10, 5));
 
 try {
-  console.log('10 / 0 =', dividir(10, 0));
+  console.log('10 / 0 =', divide(10, 0));
 } catch (e) {
-  console.log('Error esperado:', e.message);
+  console.log('Expected error:', e.message);
 }
 
-export { sumar, restar, multiplicar, dividir };
+export { add, subtract, multiply, divide };

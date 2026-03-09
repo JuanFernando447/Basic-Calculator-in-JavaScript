@@ -1,4 +1,4 @@
-import { calcularPromedio } from './utils.js';
+import { calculateAverage } from './utils.js';
 
 // Validate division by zero
 function testDivisionByZero() {
@@ -40,7 +40,7 @@ function testAverage() {
   ];
 
   lists.forEach((list) => {
-    const avg = calcularPromedio(list);
+    const avg = calculateAverage(list);
     console.log(`List: [${list}] => Average: ${avg}`);
   });
 }
