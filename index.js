@@ -1,8 +1,9 @@
 import readline from 'readline';
+import { stdin as input, stdout as output } from 'process';
 import Calculator from './Calculator.js';
 
 const calc = new Calculator();
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+const rl = readline.createInterface({ input, output });
 
 const LINE = '─'.repeat(40);
 
