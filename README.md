@@ -1,23 +1,27 @@
 # Basic Calculator - JavaScript
 
-A simple calculator program that performs arithmetic operations with input validation.
+An interactive calculator that runs in the terminal, built with OOP principles.
 
 ## Files
 
-- `index.js` - Main entry point with arithmetic operations
-- `utils.js` - Validation utilities and average calculator
+- `index.js` - Main entry point, interactive CLI menu
+- `Calculator.js` - Calculator class with arithmetic operations and history
+- `Validator.js` - Validator class with static input validation methods
 
 ## Features
 
 - Addition, subtraction, multiplication, division
+- Average of a number list
 - Division by zero validation
 - Numeric input validation
-- List average calculator
-- Max and min value finder
+- Operation history with clear option
 
 ## Usage
 
 ```bash
-node index.js       # Run main calculator
-node validations.js # Run all validation tests
+node index.js
 ```
+
+## Requirements
+
+Node.js v14.8+ (ES modules and private class fields support)
