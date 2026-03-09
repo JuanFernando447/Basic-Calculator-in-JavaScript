@@ -1,4 +1,4 @@
-const { calcularPromedio } = require('./utils');
+import { calcularPromedio } from './utils.js';
 
 // Validate division by zero
 function testDivisionByZero() {
